@@ -1,0 +1,89 @@
+openai-chatkit {
+  display: block;
+  min-height: 520px;
+}
+
+/* Bubble launcher */
+.ckw-launcher {
+  position: fixed;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .75rem 1rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.2);
+  border: 0;
+  cursor: pointer;
+  background: #1a73e8;
+  color: #fff;
+  font: 500 14px/1.2 system-ui, sans-serif;
+}
+.ckw-launcher img { width: 18px; height: 18px; display: block; }
+.ckw-launcher.tl { top: 20px; left: 20px; }
+.ckw-launcher.tr { top: 20px; right: 20px; }
+.ckw-launcher.bl { bottom: 20px; left: 20px; }
+.ckw-launcher.br { bottom: 20px; right: 20px; }
+
+/* Bubble panel */
+.ckw-panel {
+  position: fixed;
+  z-index: 10000;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+}
+.ckw-panel.hidden { display: none; }
+.ckw-panel .ckw-close {
+  position: absolute;
+  top: 0px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Modal overlay/dialog */
+.ckw-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  z-index: 10000;
+  display: none;
+}
+.ckw-overlay.active { display: block; }
+.ckw-modal {
+  position: absolute;
+  inset: 5%;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,.28);
+}
+.ckw-modal .ckw-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: 0;
+  font-size: 22px;
+  cursor: pointer;
+  color: #666;
+}
+
+/* Inline host helpful defaults */
+openai-chatkit {
+  display: block;
+  min-height: 560px;
+}
+
+/* Hide-on-mobile helper (panel/launcher/overlay that carry this class) */
+@media (max-width: 768px) {
+  .ckw-hide-mobile {
+    display: none !important;
+  }
+}
+
